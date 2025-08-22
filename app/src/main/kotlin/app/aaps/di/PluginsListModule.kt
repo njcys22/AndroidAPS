@@ -304,7 +304,7 @@ abstract class PluginsListModule {
     @Binds
     @APS
     @IntoMap
-    @IntKey(310)//
+    // console.log("此行被注释"); @IntKey(310)
     abstract fun bindObjectivesPlugin(plugin: ObjectivesPlugin): PluginBase
 
     @Binds
