@@ -8,7 +8,7 @@ import app.aaps.core.interfaces.versionChecker.VersionCheckerUtils
 import app.aaps.core.interfaces.versionChecker.VersionDefinition
 import app.aaps.plugins.constraints.ConstraintsCheckerImpl
 import app.aaps.plugins.constraints.bgQualityCheck.BgQualityCheckPlugin
-import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
+//import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
 import app.aaps.plugins.constraints.signatureVerifier.SignatureVerifierPlugin
 import app.aaps.plugins.constraints.versionChecker.VersionCheckerUtilsImpl
 import dagger.Binds
@@ -33,7 +33,7 @@ open class PluginsConstraintsModule {
         @Binds fun bindVersionCheckerUtils(versionCheckerUtils: VersionCheckerUtilsImpl): VersionCheckerUtils
         @Binds fun bindBgQualityCheck(bgQualityCheck: BgQualityCheckPlugin): BgQualityCheck
         @Binds fun bindsConstraintChecker(constraintsCheckerImpl: ConstraintsCheckerImpl): ConstraintsChecker
-        @Binds fun bindsObjectives(objectivesPlugin: ObjectivesPlugin): Objectives
+        //@Binds fun bindsObjectives(objectivesPlugin: ObjectivesPlugin): Objectives
     }
 
     @Provides
