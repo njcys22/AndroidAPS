@@ -168,7 +168,7 @@ class SetupWizardActivityTest {
             Assert.assertTrue(OpenAPSSMBPlugin.getPlugin().isEnabled())
             Assert.assertTrue(LoopPlugin.getPlugin().isEnabled(PluginType.LOOP))
             Assert.assertTrue(SensitivityOref1Plugin.getPlugin().isEnabled(PluginType.SENSITIVITY))
-            //Assert.assertTrue(ObjectivesPlugin.objectives[0].isStarted)
+            Assert.assertTrue(ObjectivesPlugin.objectives[0].isStarted)
         }
 
         private fun childAtPosition(
