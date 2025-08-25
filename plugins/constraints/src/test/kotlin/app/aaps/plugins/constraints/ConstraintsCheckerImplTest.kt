@@ -25,7 +25,7 @@ import app.aaps.plugins.aps.openAPSAMA.DetermineBasalAMA
 import app.aaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
 import app.aaps.plugins.aps.openAPSSMB.DetermineBasalSMB
 import app.aaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
-import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
+//import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
 import app.aaps.plugins.constraints.objectives.objectives.Objective
 import app.aaps.plugins.constraints.safety.SafetyPlugin
 import app.aaps.plugins.source.GlimpPlugin
@@ -72,7 +72,7 @@ class ConstraintsCheckerImplTest : TestBaseWithProfile() {
     private lateinit var insightDbHelper: InsightDbHelper
     private lateinit var constraintChecker: ConstraintsCheckerImpl
     private lateinit var safetyPlugin: SafetyPlugin
-    private lateinit var objectivesPlugin: ObjectivesPlugin
+    //private lateinit var objectivesPlugin: ObjectivesPlugin
     private lateinit var danaRPlugin: DanaRPlugin
     private lateinit var danaRSPlugin: DanaRSPlugin
     private lateinit var insightPlugin: InsightPlugin
