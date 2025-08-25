@@ -29,7 +29,7 @@ import app.aaps.implementation.profile.ProfileFunctionImpl
 import app.aaps.plugins.aps.events.EventOpenAPSUpdateGui
 import app.aaps.plugins.aps.events.EventResetOpenAPSGui
 import app.aaps.plugins.aps.loop.events.EventLoopSetLastRunGui
-//import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
+import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
 import app.aaps.plugins.sync.nsShared.NsIncomingDataProcessor
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
@@ -50,7 +50,7 @@ class LoopTest @Inject constructor() {
     @Inject lateinit var l: L
     @Inject lateinit var config: Config
     @Inject lateinit var repository: AppRepository
-    //@Inject lateinit var objectivesPlugin: ObjectivesPlugin
+    @Inject lateinit var objectivesPlugin: ObjectivesPlugin
     @Inject lateinit var persistenceLayer: PersistenceLayer
 
     @get:Rule
