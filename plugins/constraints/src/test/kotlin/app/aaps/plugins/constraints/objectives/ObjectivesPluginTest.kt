@@ -28,7 +28,7 @@ class ObjectivesPluginTest : TestBase() {
     @Mock lateinit var dateUtil: DateUtil
     @Mock lateinit var config: Config
 
-    //private lateinit var objectivesPlugin: ObjectivesPlugin
+    private lateinit var objectivesPlugin: ObjectivesPlugin
 
     private val injector = HasAndroidInjector {
         AndroidInjector {
