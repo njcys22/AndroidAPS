@@ -11,7 +11,7 @@ import app.aaps.plugins.configuration.configBuilder.ConfigBuilderPlugin
 import app.aaps.plugins.configuration.maintenance.MaintenancePlugin
 import app.aaps.plugins.constraints.bgQualityCheck.BgQualityCheckPlugin
 import app.aaps.plugins.constraints.dstHelper.DstHelperPlugin
-//import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
+import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
 import app.aaps.plugins.constraints.safety.SafetyPlugin
 import app.aaps.plugins.constraints.signatureVerifier.SignatureVerifierPlugin
 import app.aaps.plugins.constraints.storage.StorageConstraintPlugin
@@ -294,17 +294,17 @@ abstract class PluginsListModule {
     @IntKey(290)
     abstract fun bindStorageConstraintPlugin(plugin: StorageConstraintPlugin): PluginBase
 
-    @Binds
-    @APS
-    @IntoMap
-    @IntKey(300)
-    abstract fun bindSignatureVerifierPlugin(plugin: SignatureVerifierPlugin): PluginBase
-
     //@Binds
     //@APS
     //@IntoMap
-    //@IntKey(310)
-    //abstract fun bindObjectivesPlugin(plugin: ObjectivesPlugin): PluginBase
+    //@IntKey(300)
+    //abstract fun bindSignatureVerifierPlugin(plugin: SignatureVerifierPlugin): PluginBase
+
+    @Binds
+    @APS
+    @IntoMap
+    @IntKey(310)
+    abstract fun bindObjectivesPlugin(plugin: ObjectivesPlugin): PluginBase
 
     @Binds
     @AllConfigs
