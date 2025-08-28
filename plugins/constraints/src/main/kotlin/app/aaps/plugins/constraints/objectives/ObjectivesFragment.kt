@@ -130,10 +130,10 @@ class ObjectivesFragment : DaggerFragment() {
     private fun scrollToCurrentObjective() {
         activity?.runOnUiThread {
             for (i in 0 until objectivesPlugin.objectives.size) {
-                //val objective = objectivesPlugin.objectives[i]
+                val objective = objectivesPlugin.objectives[i]
                 if (!objective.isStarted || !objective.isAccomplished) {
                     context?.let {
-                        //val smoothScroller = object : LinearSmoothScroller(it) {
+                        val smoothScroller = object : LinearSmoothScroller(it) {
                             override fun getVerticalSnapPreference(): Int = SNAP_TO_START
                             override fun calculateTimeForScrolling(dx: Int): Int = super.calculateTimeForScrolling(dx) * 4
                         }
@@ -159,14 +159,14 @@ class ObjectivesFragment : DaggerFragment() {
             if (objective.objective != 0) {
                 holder.binding.objective.visibility = View.VISIBLE
                 holder.binding.objective.text = rh.gs(objective.objective)
-            //} else holder.binding.objective.visibility = View.GONE
+            } else holder.binding.objective.visibility = View.GONE
 
-            //if (objective.gate != 0) {
+            if (objective.gate != 0) {
                 holder.binding.gate.visibility = View.VISIBLE
                 holder.binding.gate.text = rh.gs(objective.gate)
             } else holder.binding.gate.visibility = View.GONE
 
-            //if (!objective.isStarted) {
+            if (!objective.isStarted) {
                 holder.binding.gate.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.defaultTextColor))
                 holder.binding.verify.visibility = View.GONE
                 holder.binding.progress.visibility = View.GONE
@@ -179,7 +179,7 @@ class ObjectivesFragment : DaggerFragment() {
                     holder.binding.start.visibility = View.VISIBLE
                 else
                     holder.binding.start.visibility = View.GONE
-            //} else if (objective.isAccomplished) {
+            } else if (objective.isAccomplished) {
                 holder.binding.gate.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.isAccomplishedColor))
                 holder.binding.verify.visibility = View.GONE
                 holder.binding.progress.visibility = View.GONE
@@ -189,7 +189,7 @@ class ObjectivesFragment : DaggerFragment() {
                 holder.binding.unstart.visibility = View.GONE
                 holder.binding.learnedLabel.visibility = View.VISIBLE
                 holder.binding.learned.removeAllViews()
-                //for (task in objective.tasks) {
+                for (task in objective.tasks) {
                     if (task.shouldBeIgnored()) continue
                     for (learned in task.learned) {
                         holder.binding.learned.addView(TextView(context).also { it.text = rh.gs(learned.learned) + "\n" })
@@ -291,7 +291,7 @@ class ObjectivesFragment : DaggerFragment() {
                                         rxBus.send(EventObjectivesUpdateGui())
                                         rxBus.send(EventSWUpdate(false))
                                         SystemClock.sleep(100)
-                                        //scrollToCurrentObjective()
+                                        scrollToCurrentObjective()
                                     } else {
                                         rxBus.send(EventNtpStatus(rh.gs(R.string.requirementnotmet), 99))
                                     }
