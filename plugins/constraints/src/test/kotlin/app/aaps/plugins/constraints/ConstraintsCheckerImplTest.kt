@@ -163,7 +163,6 @@ class ConstraintsCheckerImplTest : TestBaseWithProfile() {
             )
         val constraintsPluginsList = ArrayList<PluginBase>()
         constraintsPluginsList.add(safetyPlugin)
-        //constraintsPluginsList.add(objectivesPlugin)
         constraintsPluginsList.add(danaRPlugin)
         constraintsPluginsList.add(danaRSPlugin)
         constraintsPluginsList.add(insightPlugin)
