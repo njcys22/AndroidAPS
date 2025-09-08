@@ -21,7 +21,7 @@ class RealPumpTest {
         @Inject lateinit var loopPlugin: LoopPlugin
         @Inject lateinit var actionsPlugin: ActionsPlugin
         @Inject lateinit var configBuilderPlugin: ConfigBuilderPlugin
-        @Inject lateinit var objectivesPlugin: ObjectivesPlugin
+        //@Inject lateinit var objectivesPlugin: ObjectivesPlugin
         @Inject lateinit var treatmentsPlugin: TreatmentsPlugin
         @Inject lateinit var sp: SP
 
