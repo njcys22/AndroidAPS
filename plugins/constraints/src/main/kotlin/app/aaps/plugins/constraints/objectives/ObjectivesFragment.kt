@@ -234,7 +234,7 @@ class ObjectivesFragment : DaggerFragment() {
                     holder.binding.progress.addView(state, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
                     if (task is ExamTask) {
                         state.setOnClickListener {
-                            //val dialog = ObjectivesExamDialog()
+                            val dialog = ObjectivesExamDialog()
                             val bundle = Bundle()
                             val taskPosition = objective.tasks.indexOf(task)
                             bundle.putInt("currentTask", taskPosition)
@@ -267,10 +267,10 @@ class ObjectivesFragment : DaggerFragment() {
             holder.binding.verify.setOnClickListener {
                 receiverStatusStore.updateNetworkStatus()
                 if (binding.fake.isChecked) {
-                    //objective.accomplishedOn = dateUtil.now()
+                    objective.accomplishedOn = dateUtil.now()
                     scrollToCurrentObjective()
                     startUpdateTimer()
-                    //rxBus.send(EventObjectivesUpdateGui())
+                    rxBus.send(EventObjectivesUpdateGui())
                     rxBus.send(EventSWUpdate(false))
                 } else {
                     // move out of UI thread
@@ -284,8 +284,8 @@ class ObjectivesFragment : DaggerFragment() {
                                 if (!networkConnected) {
                                     rxBus.send(EventNtpStatus(rh.gs(R.string.notconnected), 99))
                                 } else if (success) {
-                                    //if (objective.isCompleted(time)) {
-                                        //objective.accomplishedOn = time
+                                    if (objective.isCompleted(time)) {
+                                        objective.accomplishedOn = time
                                         rxBus.send(EventNtpStatus(rh.gs(app.aaps.core.ui.R.string.success), 100))
                                         SystemClock.sleep(1000)
                                         rxBus.send(EventObjectivesUpdateGui())
