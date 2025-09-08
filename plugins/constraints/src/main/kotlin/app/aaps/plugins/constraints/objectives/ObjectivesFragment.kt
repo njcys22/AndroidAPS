@@ -361,12 +361,12 @@ class ObjectivesFragment : DaggerFragment() {
         }
 
         override fun getItemCount(): Int {
-            //return objectivesPlugin.objectives.size
+            return objectivesPlugin.objectives.size
         }
 
         inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-            //val binding = ObjectivesItemBinding.bind(itemView)
+            val binding = ObjectivesItemBinding.bind(itemView)
         }
     }
 
