@@ -55,36 +55,36 @@ class ObjectivesPlugin @Inject constructor(
     }
 
     private fun setupObjectives() {
-        //objectives.clear()
-        //objectives.add(Objective0(injector))
-        //objectives.add(Objective1(injector))
-        //objectives.add(Objective2(injector))
-        //objectives.add(Objective3(injector))
-        //objectives.add(Objective4(injector))
-        //objectives.add(Objective5(injector))
-        //objectives.add(Objective6(injector))
-        //objectives.add(Objective7(injector))
-        //objectives.add(Objective9(injector))
-        //objectives.add(Objective10(injector))
+        objectives.clear()
+        objectives.add(Objective0(injector))
+        objectives.add(Objective1(injector))
+        objectives.add(Objective2(injector))
+        objectives.add(Objective3(injector))
+        objectives.add(Objective4(injector))
+        objectives.add(Objective5(injector))
+        objectives.add(Objective6(injector))
+        objectives.add(Objective7(injector))
+        objectives.add(Objective9(injector))
+        objectives.add(Objective10(injector))
         // edit companion object if you remove/add Objective
-    //}
+    }
 
-    //fun reset() {
-        //for (objective in objectives) {
-            //objective.startedOn = 0
-            //objective.accomplishedOn = 0
-        //}
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_bg_is_available_in_ns, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_pump_status_is_available_in_ns, false)
-        //sp.putInt(app.aaps.core.utils.R.string.key_ObjectivesmanualEnacts, 0)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseprofileswitch, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusedisconnect, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusereconnect, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusetemptarget, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseactions, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseloop, false)
-        //sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusescale, false)
-    //}
+    fun reset() {
+        for (objective in objectives) {
+            objective.startedOn = 0
+            objective.accomplishedOn = 0
+        }
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_bg_is_available_in_ns, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_pump_status_is_available_in_ns, false)
+        sp.putInt(app.aaps.core.utils.R.string.key_ObjectivesmanualEnacts, 0)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseprofileswitch, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusedisconnect, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusereconnect, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusetemptarget, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseactions, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseloop, false)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusescale, false)
+    }
 
     fun allPriorAccomplished(position: Int): Boolean {
         var accomplished = true
