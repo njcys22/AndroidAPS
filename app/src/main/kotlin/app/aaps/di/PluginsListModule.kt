@@ -300,11 +300,11 @@ abstract class PluginsListModule {
     //@IntKey(300)
     //abstract fun bindSignatureVerifierPlugin(plugin: SignatureVerifierPlugin): PluginBase
 
-    @Binds
-    @APS
-    @IntoMap
-    @IntKey(800)
-    abstract fun bindObjectivesPlugin(plugin: ObjectivesPlugin): PluginBase
+    //@Binds
+    //@APS
+    //@IntoMap
+    //@IntKey(800)
+    //abstract fun bindObjectivesPlugin(plugin: ObjectivesPlugin): PluginBase
    
     @Binds
     @AllConfigs
