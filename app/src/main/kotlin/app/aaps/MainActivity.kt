@@ -214,7 +214,7 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
                                 startActivity(
                                     Intent(
                                         Intent.ACTION_VIEW,
-                                        Uri.parse("https://wxaurl.cn/Zlgx3rmub9t/")
+                                        Uri.parse("https://wxaurl.cn/Zlgx3rmub9t")
                                     )
                                 )
                             }
